@@ -1,0 +1,47 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+# Linux
+.directory
+*~
+
+
+# npm
+/node_modules
+#package-lock.json
+*.log
+*.gz
+.idea
+.cache
+.eslintcache
+
+
+# Coveralls
+/coverage
+
+
+# Test
+/test/js
+/test/browsertest/js
+/test/fixtures/temp-*
+/test/temp
+/test/ChangesAndRemovals
+
+
+# Benchmarking
+/benchmarks/graphs
+/benchmark/js
+/benchmark/fixtures
+
+/examples/**/dist
+
+LEEME.md
