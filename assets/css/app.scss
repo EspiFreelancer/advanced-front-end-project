@@ -62,20 +62,12 @@ figure:hover{}
 	"image image image image image image image image image ";
 	.text{
 		grid-area: title;
-		font-weight: 200;
-		font-size: 1.2em;
-		line-height: 1.5em;
-		h1{
-			font-weight: inherit;
-			font-size: $big;
-			letter-spacing: 0.3em;
-			line-height: 1.5em;
+		@include main-text;
 		}
 	}
 
-	.image{
-		grid-area: image;
-	}
+.image{
+	grid-area: image;
 }
 
 .container{
@@ -106,6 +98,35 @@ figure:hover{}
 				font-size: 0.5em;
 				font-weight: 200;
 				margin-top: 6px;
+			}
+		}
+	}
+}
+
+.mission{
+	align-items: center;
+	.container{
+		@include main-text;
+		figure{
+			float: right;
+			margin-left: 20px;
+		}
+
+		p{
+			line-height: 2em;
+			&:nth-of-type(1){
+				margin-bottom: 3em;
+				position: relative;
+
+				&::after{
+					content:'';
+					background-color: $blue;
+					position: absolute;
+					bottom: -1.5em;
+					height: 5px;
+					width: 68%;
+					z-index: -1;
+				}
 			}
 		}
 	}
