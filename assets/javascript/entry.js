@@ -1,1 +1,3 @@
-console.log('Interesting!');
+// css
+
+import '../css/app.scss';

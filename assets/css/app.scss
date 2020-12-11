@@ -9,7 +9,7 @@ html,body{
 }
 
 img{
-	max-width: 100;
+	max-width: 100%;
 }
 
 figure{
@@ -17,11 +17,11 @@ figure{
 	max-width: 100%;
 	margin: 0px;
 	figcaption{
+		position: absolute;
 		padding: $large-padding;
 		font-weight: bold;
 		text-transform: uppercase;
 		font-size: 2em;
-		position: absolute;
 		letter-spacing: 5px;
 		width: auto;
 		bottom: 0px;
@@ -33,8 +33,8 @@ figure{
 }
 
 .btn{
-	padding: $large-padding;
 	position: relative;
+	padding: $large-padding;
 	color: $black !important;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -42,6 +42,7 @@ figure{
 	box-sizing: border-box;
 	&:before{
 		content: '';
+		position: absolute;
 		width: 100%;
 		left: 0px;
 		bottom: 0px;
@@ -62,14 +63,6 @@ figure:hover{}
 	grid-template-columns: repeat(12,1fr);
 }
 
-.main-text{
-	grid-area: title;
-}
-
-.main-image{
-	grid-area: image;
-}
-
 .grid-main-area{
 	display: grid;
 	grid-template-columns: repeat(9,1fr);
@@ -80,7 +73,6 @@ figure:hover{}
 	.text{
 		grid-area: title;
 		font-weight: 200;
-		grid-area: title;
 		font-size: 1.2em;
 		line-height: 1.5em;
 		h1{
@@ -101,14 +93,15 @@ figure:hover{}
 	padding: $big-padding;
 }
 
-
 @media (min-width: 960px){
+
 	.container{
 		grid-column: 2 / 12;
 	}
 	.grid-main-area{
 		display: grid;
 		grid-template-columns: repeat(9,1fr);
-		grid-template-areas: 
+		grid-template-areas:
+		"title title title image image image image image image";
 	}
 }
