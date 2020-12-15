@@ -104,6 +104,9 @@ figure:hover{}
 }
 
 .slider{
+	.image{
+		min-width: 100vh;
+	}
 	header{
 		background-color: $blue;
 		color: $white;
@@ -112,6 +115,8 @@ figure:hover{}
 		width: 90%;
 		box-sizing: border-box;
 		margin: 0 auto;
+		z-index: 10;
+		position: relative;
 		h2{
 			margin:0px;
 		}
@@ -133,6 +138,23 @@ figure:hover{}
 		}
 	}
 }
+
+/* Slider Animation */
+#slider-text-content {
+	@include transition;
+	&.hide {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+}
+
+#slider-image {
+	@include transition;
+	&.hide {
+		opacity: 0;
+	}
+}
+/* End Slider Animation */
 
 .mission{
 	align-items: center;
