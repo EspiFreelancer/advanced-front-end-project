@@ -1,10 +1,21 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+// To process HTML template
 const htmlWebpack = new HtmlWebpackPlugin({
   template: './assets/index.template.html',
   filename: 'index.html'
+});
+
+// To load all images into assets
+const copyWebpack = new CopyWebpackPlugin({
+  patterns: [{
+    from: './assets/images',
+    to: 'images'
+  },
+  ]
 });
 
 module.exports =  {
@@ -38,7 +49,8 @@ module.exports =  {
   plugins: [
   /* ... */
     // Only update what has changed on hot reload
-    htmlWebpack
+    htmlWebpack,
+    copyWebpack
     ],
     module: {
       rules: [
