@@ -104,6 +104,24 @@ figure:hover{}
 }
 
 .slider{
+	.controls{
+		text-align: right;
+		margin-bottom: 10px;
+		padding-right: 2.5em;
+		display: none;
+		.right-arrow,.left-arrow{
+			height: 70px;
+			@include transition;
+			transition-duration: .15s;
+			cursor: pointer;
+			&:hover{
+				opacity: .2;
+			}
+		}
+		.left-arrow{
+			transform: rotate(180deg);
+		}
+	}
 	.image{
 		min-width: 100vh;
 	}
