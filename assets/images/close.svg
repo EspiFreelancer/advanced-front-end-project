@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 17 17"
+   version="1.1"
+   class="btn-close"
+   id="svg4188"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="close.svg"
+   width="1.1333333pc"
+   height="1.1333333pc">
+  <metadata
+     id="metadata4200">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>close</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="714"
+     id="namedview4198"
+     showgrid="false"
+     inkscape:zoom="15.470588"
+     inkscape:cx="14.409334"
+     inkscape:cy="5.6485228"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4188"
+     units="pc" />
+  <title
+     id="title4190">close</title>
+  <defs
+     id="defs4192" />
+  <path
+     style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:24, 4;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 3.5566406 2.6035156 C 3.2783601 2.6035156 3.0003423 2.7105952 2.7871094 2.9238281 C 2.3606435 3.350294 2.3606435 4.0364247 2.7871094 4.4628906 L 6.9609375 8.6367188 L 2.7871094 12.810547 C 2.3606435 13.237013 2.3606435 13.923143 2.7871094 14.349609 C 3.2135753 14.776075 3.899706 14.776075 4.3261719 14.349609 L 8.5 10.175781 L 12.673828 14.349609 C 13.100294 14.776075 13.786425 14.776075 14.212891 14.349609 C 14.639357 13.923143 14.639357 13.237013 14.212891 12.810547 L 10.039062 8.6367188 L 14.212891 4.4628906 C 14.639357 4.0364247 14.639357 3.350294 14.212891 2.9238281 C 13.786425 2.4973622 13.100294 2.4973622 12.673828 2.9238281 L 8.5 7.0976562 L 4.3261719 2.9238281 C 4.1129389 2.7105952 3.8349212 2.6035156 3.5566406 2.6035156 z "
+     id="rect4238" />
+</svg>

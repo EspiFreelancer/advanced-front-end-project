@@ -6,7 +6,35 @@
 	<title>Pagina básica</title>
 </head>
 <body>
-	<section>
+
+	<div class="menu">
+		<img src="images/menu.svg" alt="Boton menú">
+	</div>
+
+	<div class="menu-screen">
+		<a href="#" class="close">
+			<img src="images/close.svg" alt="Boton cerrar menú"></a>
+		<nav>
+			<a href="#home">
+				<span class="main">Home</span>
+				<span>Quienes somos</span></a>
+			<a href="#about">
+				<span class="main">Instalaciones</span>
+				<span>Conoce nuestro espacio</span></a>
+			<a href="#mission">
+				<span class="main">Misión</span>
+				<span>Nuestra motivación</span></a>
+			<a href="#ubication">
+				<span class="main">Ubicación</span>
+				<span>Mira como llegar</span></a>
+			<a href="#social">
+				<span class="main">Contacto</span>
+				<span>Nos encantaría conocerte</span></a>
+		</nav>
+	</div>
+
+
+	<section id="home">
 		<div class="grid">
 			<div class="container">
 				<div class="grid-main-area">
@@ -26,6 +54,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section>
 		<div class="cover parallax">
 			<p>
@@ -35,8 +64,9 @@
 		</div>
 	</section>
 
-	<section>
+	<section id="about">
 		<div class="grid-main-area slider">
+
 			<div class="text">
 				<div class="controls">
 					<img src="images/right-arrow.svg" alt="flecha izquierda" class="left-arrow">
@@ -60,7 +90,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section id="mission">
 		<div class="grid full-height mission">
 			<div class="container">
 				<h1>Nuestra Misión</h1>
@@ -77,13 +107,13 @@
 		</div>
 	</section>
 
-	<section>
+	<section id="ubication">
 		<div id="map">
 			
 		</div>
 	</section>
 
-	<section>
+	<section id="social">
 		<div class="grid social">
 			<div class="container">
 				<p class="title">Contacta con nosotros</p>
