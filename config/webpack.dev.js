@@ -1,36 +1,15 @@
-const webpack = require('webpack');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-// To process HTML template
-const htmlWebpack = new HtmlWebpackPlugin({
-  template: './assets/index.template.html',
-  filename: 'index.html'
-});
-
-// To load all images into assets
-const copyWebpack = new CopyWebpackPlugin({
-  patterns: [{
-    from: './assets/images',
-    to: 'images'
-  },
-  ]
-});
-
-module.exports =  {
+module.exports = merge(common, {
+  // Set the mode to development or production
   mode: 'development',
 
-  entry: {
-    main: path.resolve(__dirname, '../assets/javascript/entry.js'),
-  },
+  // Control how source maps are generated
+  devtool: 'inline-source-map',
 
-  output: {
-    publicPath: '/',
-    path: path.resolve(__dirname, '..'),
-    filename: 'dist/javascript/bundle.js'
-  },
-
+  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, './dist'),
@@ -40,40 +19,25 @@ module.exports =  {
     port: 8080,
   },
 
-  resolve: {
-    alias: {
-      images: path.resolve(__dirname, 'public/images')
-    }
-  },
-
-  plugins: [
-  /* ... */
-    // Only update what has changed on hot reload
-    htmlWebpack,
-    copyWebpack
-    ],
-    module: {
-      rules: [
+  module:{
+    rules:[
+    {
+      test: /\.scss$/,
+      use: ['style-loader','css-loader','sass-loader']
+    },
+    {
+      test: /\.(svg|gif|png|jpe?g)$/,
+      use: [
       {
-        test: /\.scss$/,
-        use: ['style-loader','css-loader','sass-loader']
-      },
-      {
-        test: /\.(svg|gif|png|jpe?g)$/,
-        use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/images/'
-          }
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets/images/'
         }
-        ]
-      },
-      {
-        test: /\.(html)$/,
-        use: ['html-loader']
-      }    
+      }
       ]
     }
-  };
+    ]
+  },
+});
+
