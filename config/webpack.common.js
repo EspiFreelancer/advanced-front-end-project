@@ -1,10 +1,11 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugi'n);
 const path = require('path');
 
 // To process HTML template
 const htmlWebpack = new HtmlWebpackPlugin({
+  hash:false,
   template: './assets/index.template.html',
   filename: 'index.html'
 });
@@ -26,8 +27,8 @@ module.exports =  {
 
   output: {
     publicPath: '/',
-    path: path.resolve(__dirname, '..'),
-    filename: 'dist/javascript/bundle.js'
+    path: path.resolve(__dirname, '../dist/'),
+    filename: 'javascript/bundle.js'
   },
 
   resolve: {

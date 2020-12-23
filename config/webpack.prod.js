@@ -1,5 +1,6 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -11,7 +12,7 @@ module.exports = merge(common, {
   // Deactivate devtool
   devtool: false,
   output: {
-    path: paths.build,
+    path: path.build,
     publicPath: '/',
     filename: 'js/[name].[contenthash].bundle.js',
   },
@@ -26,13 +27,20 @@ module.exports = merge(common, {
         options: {
           importLoaders: 2,
           sourceMap: false,
-          modules: true,
+          modules: false,
         },
       },
-      'postcss-loader',
       'sass-loader',
       ],
     },
+    {
+      test: /\.(ttf|eot|svg|png|jpg|gif|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'images'
+    }
+    }  
     ],
   },
   plugins: [

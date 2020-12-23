@@ -44,4 +44,7 @@ Desktop.ini
 
 /examples/**/dist
 
+# Build
+/dist
+
 LEEME.md
